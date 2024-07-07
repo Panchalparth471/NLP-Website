@@ -149,4 +149,5 @@ def do_emotion():
      return render_template('emotion.html',message='{} -> {}'.format(nlpcloud_emotion,nlpcloud_score)) 
      
 #Debug is like nodemon for flask used for reflection continous changes
-app.run(debug=True)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8080, debug=True)
